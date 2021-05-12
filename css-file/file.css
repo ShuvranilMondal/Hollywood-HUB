@@ -14,6 +14,22 @@ html{
     max-width: 1200px;
     margin: 0 auto;
 }
+
+.sml-btn{
+    display: inline-block;
+    text-transform: uppercase;
+    padding: 0.3em 0.8em;
+    color: white;
+    background: rgb(18, 167, 104);
+    font-size: 1.6rem;
+    border-radius: 50px;
+    margin-top:10px;
+    transition: all 0.5s ease-in-out;
+}
+.sml-btn:hover{
+    background: rgb(14, 138, 86);
+}
+
 a{
     text-decoration: none;
 }
@@ -89,6 +105,7 @@ header .nav-container .nav-items #movie-list{
     background-position:center;
     background-size: cover;
     animation: bg-change 30s ease-in-out infinite;
+    margin-bottom: 50px;
 }
 
 @keyframes bg-change{
@@ -120,6 +137,16 @@ header .nav-container .nav-items #movie-list{
     justify-content: center;
     align-items: center;
     height: 100%;
+    opacity: 0;
+    transform: translateY(-20px);
+    animation: jump 1s ease-in forwards;
+}
+
+@keyframes jump{
+    100%{
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 .showcase .shw-container h1{
@@ -132,15 +159,31 @@ header .nav-container .nav-items #movie-list{
 
 .showcase .shw-container .search-box{
     margin: 10px 0;
-    /* border: 2px solid red; */
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: row;
     width: 35%;
     height: 12%;
     background: white;
     opacity: 0.65;
+    border-radius: 50px;
+    padding-right: 10px;
 }
 
 .showcase .shw-container .search-box #search{
+    display: inline-block;
     z-index: 10000;
+    width: 90%;
+    height: 100%;
+    border-radius: 50px;
+    border: none;
+    outline: none;
+    padding: 10px;
+    font-size: 2rem;
+}
+i{
+    font-size: 2rem;
 }
 
 .btn{
@@ -156,4 +199,75 @@ header .nav-container .nav-items #movie-list{
 
 .btn:hover{
     background: rgb(14, 131, 82);
+}
+
+/* //////////// movie /////////// */
+
+.movies #menu{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.movies #menu .movie-box{
+    position: relative;
+    width: 150px;
+    height: 200px;
+    list-style: none;
+    margin: 10px;
+}
+
+.movies #menu .movie-box img{
+    display: block;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+
+.movies #menu .movie-box .movie-containet{
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    z-index: 9999;
+    opacity: 0;
+    transition: all 0.3s ease-in-out;
+}
+
+.movies #menu .movie-box:hover .movie-containet{
+    opacity: 1;
+}
+
+
+.movies #menu .movie-box::after{
+    position: absolute;
+    content: '';
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.568);
+    z-index: 99;
+    opacity: 0;
+    transform: scaleY(0);
+    transform-origin: bottom;
+    transition: all 0.3s ease-in-out;
+}
+
+.movies #menu .movie-box:hover::after{
+    opacity: 1;
+    transform: scaleY(1);
+}
+
+.movies #menu .movie-box .movie-containet h3{
+    color: white;
+    text-transform: capitalize;
+    font-size: 1.5rem;
+    margin-bottom: 5px;
+}
+h4{
+    color: white;
+    text-transform: uppercase;
 }
