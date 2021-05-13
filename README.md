@@ -4,6 +4,7 @@ Hollywood HUB is a  clone version of different movie streaming sites (static). W
 # Features 🕹
 - Search bar
 - Filter your favourite movies according to their genres
+- Responsive 
 
 # Screenshot 🎨
 
