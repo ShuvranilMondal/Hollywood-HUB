@@ -1,0 +1,19 @@
+@media (max-width:600px){
+    html{
+        font-size: 50%;
+    }
+    header .nav-container .nav-items .nav-btn{
+        display: none;
+    }
+    header .nav-container .nav-items #mov-list{
+        display: inline;
+        margin-right: 10px;
+    }
+    header .nav-container .logo{
+        font-size: 3rem;
+    }
+    .showcase .shw-container .search-box{
+        width: 50%;
+        height: 10%;
+    }
+}

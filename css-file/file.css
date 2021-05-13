@@ -81,7 +81,7 @@ header .nav-container .logo{
     font-weight: 600;
 }
 
-header .nav-container .nav-items #movie-list{
+header .nav-container .nav-items #mov-list{
     display: inline-block;
     outline: none;
     border: none;
@@ -207,6 +207,7 @@ i{
 
 .movies{
     /* padding-bottom: 50px; */
+    min-height: 50vh;
 }
 
 .movies #menu{
