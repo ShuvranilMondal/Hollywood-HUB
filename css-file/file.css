@@ -306,13 +306,16 @@ h4{
 
 
 .next-button .box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
     text-align: center;
     height: 30px;
     width: 30px;
     background: rgb(15, 151, 95);
     border-radius: 100%;
     transition: all 0.2s ease-in-out;
-    padding-left: 2px;
 }
 
 .next-button .box:hover{

@@ -17,3 +17,25 @@
         height: 10%;
     }
 }
+
+@media (max-width:400px){
+    .movies #menu{
+        justify-content: center;
+    }
+    .movies #menu .movie-box{
+        height: 300px;
+        width: 200px;
+    }
+    .showcase{
+        height: 40vh;
+    }
+    .movies #menu .movie-box .movie-containet h3{
+        font-size: 2.5rem;
+    }
+    h4{
+        font-size: 1.5rem;
+    }
+    .sml-btn{
+        font-size: 2.2rem;
+    }
+}
